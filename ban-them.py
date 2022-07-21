@@ -91,7 +91,7 @@ def main(argv):
             pass
     except IOError:
         with open(sh_file, 'w') as file:
-            file.write("#!/bin/bash\n\ncat $1|grep Ban|awk '{print $5\" \"$7}'|sort|uniq -c|sort -nr\n")
+            file.write("#!/bin/bash\n\ncat $1|grep Ban|awk '{print $6\" \"$8}'|sort|uniq -c|sort -nr\n")
             os.chmod(sh_file, stat.S_IEXEC)
 
     # Get the logs sorted
